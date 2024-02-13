@@ -1,12 +1,34 @@
 
 body {
-  /*background-image: url("./../img/bg.png");*/
-  background-color: #92b3bd;
-  background-size: cover;
+  background-image: url("./../img/bg.png");
+  backdrop-filter: blur(3px);
+  height: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
-  justify-content: center;
-  align-items: center;
+  object-fit: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+nav ul {
+  display: flex;
+  background: #4f9097;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;;
+}
+
+nav li a {
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-right: 1px solid black;
+}
+
+nav li a:hover {
+  background: #4e99a1;
+  transition: background-color 1s ease;
 }
 
 /*****************************/
@@ -16,6 +38,12 @@ body {
 .menu-logo {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+}
+
+.nav__toggle {
+  cursor: pointer;
+  background: #4f9097;
 }
 
 .logo {
@@ -184,19 +212,16 @@ body {
   }
 }
 
-.center-glass-block {
-  background: #4f9097;
-  backdrop-filter: blur(5px);
-  height: 150px;
-  width: 600px;
-  border-radius: 15px;
-  border: 1px solid rgba(43, 43, 43, 0.568);
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  padding: 30px 0;
-  transform: translate(0, 20%);
+/*********************************/
+/* Styling Header Image Menu End */
+/*********************************/
+
+.a4-style {
+  width: 900px;
+  min-height: 850px;
+  margin: 0 auto;
+  border: 1px solid black;
+  background-color: #92b3bd;
 }
 
 .glasses {
@@ -204,9 +229,10 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  grid-gap: 10px;
 }
 
-.glass-block {
+.glass-block, .center-glass-block {
   background: #4f9097;
   backdrop-filter: blur(5px);
   width: 150px;
@@ -215,30 +241,39 @@ body {
   justify-content: center;
   text-align: center;
   padding: 30px 0;
-  transform: translate(0, 20%);
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.05);
 }
 
-.theme {
+.center-glass-block {
+  min-height: 100px;
+  min-width: 600px;
+  display: flex;
+  margin: 20px auto auto;
+  text-align: justify;
+}
+
+.center-glass-block:last-child {
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.theme, .theme-nav {
   font-family: fantasy;
-  font-size: medium;
-  transition: transform .2s; /* Animation */
+  transition: transform .2s;
+  font-weight: lighter;
 }
 
 .theme:hover {
-  transform: scale(1.5);
-}
-
-.theme:hover .wrapper {
-  transform: scale(0.9);
+  transform: scale(1.2);
 }
 
 .big-glass-text {
-  font-family: fantasy;
+  font-family: "Roboto", sans-serif;
   font-size: 48px;
 }
 
 .glass-text {
-  font-family: fantasy;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: lighter;
 }
@@ -252,3 +287,12 @@ body {
   padding: 60px 0;
 }
 
+.last-nav-li {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.fa-img {
+  height: 30px;
+  width: 120px;
+}
