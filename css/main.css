@@ -296,3 +296,16 @@ nav li a:hover {
   height: 30px;
   width: 120px;
 }
+
+.question {
+  display: flex;
+  margin: 20px auto auto;
+  text-align: left;
+  border: #979797;
+  background-color: #979797;
+  max-width: 500px;
+  min-height: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(43, 43, 43, 0.568);
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, 0.05);
+}
