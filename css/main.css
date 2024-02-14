@@ -1,4 +1,3 @@
-
 body {
   background-image: url("./../img/bg.png");
   backdrop-filter: blur(3px);
@@ -15,7 +14,8 @@ nav ul {
   display: flex;
   background: #4f9097;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;;
+  border-bottom: 1px solid black;
+  ;
 }
 
 nav li a {
@@ -75,7 +75,7 @@ nav li a:hover {
   align-items: center;
 }
 
-.site-header__start > * + * {
+.site-header__start>*+* {
   margin-left: 1rem;
 }
 
@@ -111,7 +111,6 @@ nav li a:hover {
 @media (max-width: 679px) {
   .nav__wrapper {
     top: 101px;
-    /* Use a CSS variable and get JS help */
   }
 }
 
@@ -218,7 +217,7 @@ nav li a:hover {
 
 .a4-style {
   width: 900px;
-  min-height: 850px;
+  min-height: 100vh;
   margin: 0 auto;
   border: 1px solid black;
   background-color: #92b3bd;
@@ -230,9 +229,12 @@ nav li a:hover {
   flex-flow: row wrap;
   justify-content: space-evenly;
   grid-gap: 10px;
+  display: flex;
 }
 
-.glass-block, .center-glass-block {
+.glass-block,
+.center-glass-block,
+.center-glass-block-last {
   background: #4f9097;
   backdrop-filter: blur(5px);
   width: 150px;
@@ -244,7 +246,8 @@ nav li a:hover {
   box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.05);
 }
 
-.center-glass-block {
+.center-glass-block,
+.center-glass-block-last {
   min-height: 100px;
   min-width: 600px;
   display: flex;
@@ -252,12 +255,13 @@ nav li a:hover {
   text-align: justify;
 }
 
-.center-glass-block:last-child {
+.center-glass-block-last {
   margin-bottom: 50px;
   margin-top: 100px;
 }
 
-.theme, .theme-nav {
+.theme,
+.theme-nav {
   font-family: fantasy;
   transition: transform .2s;
   font-weight: lighter;
@@ -265,11 +269,6 @@ nav li a:hover {
 
 .theme:hover {
   transform: scale(1.2);
-}
-
-.big-glass-text {
-  font-family: "Roboto", sans-serif;
-  font-size: 48px;
 }
 
 .glass-text {
@@ -285,6 +284,7 @@ nav li a:hover {
   justify-content: center;
   text-align: center;
   padding: 60px 0;
+  display: flex;
 }
 
 .last-nav-li {
@@ -295,17 +295,4 @@ nav li a:hover {
 .fa-img {
   height: 30px;
   width: 120px;
-}
-
-.question {
-  display: flex;
-  margin: 20px auto auto;
-  text-align: left;
-  border: #979797;
-  background-color: #979797;
-  max-width: 500px;
-  min-height: 40px;
-  border-radius: 15px;
-  border: 1px solid rgba(43, 43, 43, 0.568);
-  box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, 0.05);
 }
