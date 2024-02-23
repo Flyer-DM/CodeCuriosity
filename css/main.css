@@ -14,7 +14,7 @@ nav ul {
   display: flex;
   background: #9cc4dc;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;;
+  border-bottom: 1px solid black;
 }
 
 nav li a {
@@ -23,6 +23,7 @@ nav li a {
   text-decoration: none;
   font-weight: bold;
   border-right: 1px solid black;
+  height: 100%;
 }
 
 nav li a:hover {
@@ -290,7 +291,7 @@ nav li a:hover {
 }
 
 .fa-img {
-  height: 30px;
+  height: 40px;
   width: 120px;
 }
 
@@ -322,7 +323,7 @@ nav li a:hover {
 .dm-cell {
   display: table-cell;
   padding: 0 1em;
-  vertical-align: middle;
+  vertical-align: top;
   text-align: center;
 }
 
@@ -346,9 +347,6 @@ nav li a:hover {
 .pl-left {
   width: 25%;
   height: auto;
-}
-
-.pl-left {
   float: left;
   margin: 5px 15px 5px 0;
 }

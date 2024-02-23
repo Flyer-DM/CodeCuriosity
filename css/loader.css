@@ -21,7 +21,7 @@
 .loader__element {
   border-radius: 100%;
   border: var(--size) solid var(--point-color);
-  margin: calc(var(--size)*2);
+  margin: calc(var(--size) * 2);
 }
 
 .loader__element:nth-child(1) {
