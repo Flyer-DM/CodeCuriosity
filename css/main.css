@@ -12,10 +12,9 @@ body {
 
 nav ul {
   display: flex;
-  background: #4f9097;
+  background: #9cc4dc;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  ;
+  border-bottom: 1px solid black;;
 }
 
 nav li a {
@@ -27,13 +26,17 @@ nav li a {
 }
 
 nav li a:hover {
-  background: #4e99a1;
+  background: #5698ae;
   transition: background-color 1s ease;
 }
 
 /*****************************/
 /* Styling Header Image Menu */
 /*****************************/
+
+.nav__toggle, .site-header {
+  background: #9cc4dc;
+}
 
 .menu-logo {
   width: 20px;
@@ -43,7 +46,6 @@ nav li a:hover {
 
 .nav__toggle {
   cursor: pointer;
-  background: #4f9097;
 }
 
 .logo {
@@ -58,7 +60,6 @@ nav li a:hover {
 
 .site-header {
   position: relative;
-  background-color: #4f9097;
 }
 
 .site-header__wrapper {
@@ -75,7 +76,7 @@ nav li a:hover {
   align-items: center;
 }
 
-.site-header__start>*+* {
+.site-header__start > * + * {
   margin-left: 1rem;
 }
 
@@ -97,7 +98,7 @@ nav li a:hover {
   visibility: hidden;
   opacity: 0;
   transform: translateX(-100%);
-  background-color: #d9f0f7;
+  background-color: #9cc4dc;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   display: block;
 }
@@ -220,7 +221,7 @@ nav li a:hover {
   min-height: 100vh;
   margin: 0 auto;
   border: 1px solid black;
-  background-color: #92b3bd;
+  background-color: #aac6d5;
 }
 
 .glasses {
@@ -229,35 +230,31 @@ nav li a:hover {
   flex-flow: row wrap;
   justify-content: space-evenly;
   grid-gap: 10px;
-  display: flex;
 }
 
 .glass-block,
-.center-glass-block,
-.center-glass-block-last {
-  background: #4f9097;
+.center-glass-block {
+  background: #b0bcbf;
   backdrop-filter: blur(5px);
   width: 150px;
   border-radius: 15px;
   border: 1px solid rgba(43, 43, 43, 0.568);
   justify-content: center;
   text-align: center;
-  padding: 30px 0;
+  padding: 15px;
   box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.05);
 }
 
-.center-glass-block,
-.center-glass-block-last {
-  min-height: 100px;
+.center-glass-block {
+  min-height: 50px;
   min-width: 600px;
   display: flex;
   margin: 20px auto auto;
   text-align: justify;
 }
 
-.center-glass-block-last {
-  margin-bottom: 50px;
-  margin-top: 100px;
+.empty {
+  padding-top: 100px;
 }
 
 .theme,
@@ -295,4 +292,128 @@ nav li a:hover {
 .fa-img {
   height: 30px;
   width: 120px;
+}
+
+.dm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.dm-overlay:target {
+  display: block;
+  -webkit-animation: fade .6s;
+  -moz-animation: fade .6s;
+  animation: fade .6s;
+}
+
+.dm-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.dm-cell {
+  display: table-cell;
+  padding: 0 1em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.dm-modal {
+  display: inline-block;
+  padding: 20px;
+  max-width: 50em;
+  background: #607d8b;
+  -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+  color: #cfd8dc;
+  text-align: left;
+}
+
+.dm-modal img {
+  width: 100%;
+  height: auto;
+}
+
+.pl-left {
+  width: 25%;
+  height: auto;
+}
+
+.pl-left {
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+
+.close {
+  z-index: 9999;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: #cfd8dc;
+  text-align: center;
+  text-decoration: none;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.close:after {
+  display: block;
+  border: 2px solid #cfd8dc;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  content: 'X';
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+}
+
+.close:hover:after {
+  border-color: #fff;
+  color: #fff;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+
+@-moz-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
 }

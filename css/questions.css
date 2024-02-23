@@ -18,7 +18,7 @@
     position: relative;
     display: flex;
     padding: 1em 1em 1em 1em;
-    background: #4f9097;
+    background: #b0bcbf;
     font-weight: bold;
     line-height: 1.3;
     cursor: pointer;
@@ -27,7 +27,7 @@
 .tab-content {
     max-height: 0;
     overflow: hidden;
-    background: #4f9097;
+    background: #b0bcbf;
     -webkit-transition: max-height .35s;
     -o-transition: max-height .35s;
     transition: max-height .35s;
