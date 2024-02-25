@@ -39,7 +39,7 @@
 }
 
 .tab input:checked ~ .tab-content {
-  max-height: 100vh;
+  max-height: 1000em;
 }
 
 .tab label::after {
